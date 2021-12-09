@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AV Weather Check</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css">
     <link rel="stylesheet" href="develop/css/style.css">
 </head>
 <body>
     <div class="box">
-        <div>
+        <h1 class="text-center">Weather</h1>
+        <div class="grid-padding-x">
+            <div class="cell search"> 
             <h3>Look for city</h3>
-            <div>
-                <input type="text" id="city-result">
-                <div>
-                    <button id="city" type="button"></button>
+            <div class="search">
+                <input class="input" type="search" placeholder="search" id="input">
+                    <button class="button" id="button" type="button">Search</button>
                 </div>
             </div>
             <div>
@@ -24,18 +26,22 @@
         <div>
             <div>
                 <div>
-                    <div id="today">
+                    <div class="today">
+                        <h2 class="city"></h2>
+                        <h1 class="temp"></h1>
+                        <div class="flex">
+                            <div class="description"></div>
+                            
+                        </div>
+                        <div class="humidity"></div>
+                        <div class="wind"></div>
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script></script>
-    <script></script>
-    <script src="https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={alerts}&appid={9cc92b36abe4cc47096b09e22dac9a86}"></script>
-    <script src="develop/js/json.js"></script>
+    <script src="develop/js/json.js" defer></script>
     
 </body>
 </html>
